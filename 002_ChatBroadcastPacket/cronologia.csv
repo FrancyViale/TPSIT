@@ -1,0 +1,171 @@
+Luca ambrogio: ciao
+Luca ambrogio: come
+Luca ambrogio: state
+Meglio se al governo salisse quel frutto
+Luca ambrogio: frutto?
+Luca ambrogio: salvini?
+Luca ambrogio: meloni?
+Luca ambrogio: la meloni?
+Luca ambrogio: forza berlusca
+Popo la meloni
+Luca ambrogio: meloni e anguria
+ciao
+Luca ambrogio: ciao
+Luca ambrogio: ki ses
+Luca ambrogio: spillette delle SS
+Luca ambrogio: ci stanno
+Luca ambrogio: matrimonio a casa pound
+Matrimonio naturale >>>
+Luca ambrogio: cucchi comunica
+c
+Cosa ne pensate della sinistra italiana?
+Luca ambrogio: che schifo
+esattament
+Luca ambrogio: la sinistra italiana
+un mmee
+meme
+Luca ambrogio: che schifo
+M&M
+LucaAmbrogio: import java.io.*;
+LucaAmbrogio: import java.util.Vector;
+LucaAmbrogio: 
+LucaAmbrogio: 
+LucaAmbrogio: public class main {
+LucaAmbrogio: 
+LucaAmbrogio:     public static void main(String[] args) throws IOException{
+LucaAmbrogio: 
+LucaAmbrogio:         String nomeFile = "C:/Users/Luca Ambrogio/IdeaProjects/spotify/src/ProgettazioneSpotify.csv";
+LucaAmbrogio: 
+LucaAmbrogio:         Vector<spotify> canzoni;
+LucaAmbrogio:         canzoni = new Vector<spotify>();
+LucaAmbrogio: 
+LucaAmbrogio:         File f = new File(nomeFile);
+LucaAmbrogio:         FileReader fr = new FileReader(nomeFile);
+LucaAmbrogio: 
+LucaAmbrogio:         BufferedReader br = new BufferedReader(fr);
+LucaAmbrogio:         String s = "";
+LucaAmbrogio:         String currentLine = "";
+LucaAmbrogio: 
+LucaAmbrogio:         s = br.readLine();
+LucaAmbrogio:         int count = 0;
+LucaAmbrogio: 
+LucaAmbrogio:         while (s != null) {
+LucaAmbrogio:             if(count>0) {
+LucaAmbrogio:                 String[] riga = s.split(";");
+LucaAmbrogio:                 for (int i = 0; i < riga.length; i++) {
+LucaAmbrogio:                     System.out.print(riga[i] + " ");
+LucaAmbrogio:                 }
+LucaAmbrogio:             }
+LucaAmbrogio:             s = br.readLine();
+LucaAmbrogio:             count++;
+LucaAmbrogio:             System.out.println("\n");
+LucaAmbrogio:         }
+LucaAmbrogio: 
+LucaAmbrogio:         br.close();
+LucaAmbrogio: 
+LucaAmbrogio:     }
+LucaAmbrogio: }
+LucaAmbrogio: 
+import java.io.*;
+import java.util.Vector;
+
+
+public class main {
+
+    public static void main(String[] args) throws IOException{
+
+        String nomeFile = "C:/Users/Luca Ambrogio/IdeaProjects/spotify/src/ProgettazioneSpotify.csv";
+
+        Vector<spotify> canzoni;
+        canzoni = new Vector<spotify>();
+
+        File f = new File(nomeFile);
+        FileReader fr = new FileReader(nomeFile);
+
+        BufferedReader br = new BufferedReader(fr);
+        String s = "";
+        String currentLine = "";
+
+        s = br.readLine();
+        int count = 0;
+
+        while (s != null) {
+            if(count>0) {
+                String[] riga = s.split(";");
+                for (int i = 0; i < riga.length; i++) {
+                    System.out.print(riga[i] + " ");
+                }
+            }
+            s = br.readLine();
+            count++;
+            System.out.println("\n");
+        }
+
+        br.close();
+
+    }
+}
+import java.io.*;
+import java.util.Vector;
+import java.io.FileWriter;
+
+public class spotify{
+        public Vector<canzone> canzoni;
+
+    public spotify(){
+        canzoni = new Vector<canzone>();
+    }
+
+    public int leggiCanzoniDaFile() throws IOException {
+
+        String nomeFile = "C:/Users/Luca Ambrogio/IdeaProjects/spotify/src/ProgettazioneSpotify.csv";
+
+        File f = new File(nomeFile);
+        FileReader fr = new FileReader(nomeFile);
+
+        BufferedReader br = new BufferedReader(fr);
+        String s = "";
+        String currentLine = "";
+
+        s = br.readLine();
+        int count = 0;
+
+        while (s != null) {
+            if(count>0) {
+                String[] riga = s.split(";");
+                for (int i = 0; i < riga.length; i++) {
+                    System.out.print(riga[i] + " ");
+                }
+            }
+            s = br.readLine();
+            count++;
+            System.out.println("\n");
+        }
+
+        br.close();
+        return 1;
+    }
+
+    public void salvaCanzoniSuFile(canzone canzone) throws IOException{
+        String nomeFile = "C:/Users/Luca Ambrogio/IdeaProjects/spotify/src/ProgettazioneSpotify.csv";
+
+        File f = new File(nomeFile);
+
+        FileWriter fw = new FileWriter(nomeFile);
+        BufferedWriter bw = new BufferedWriter(fw);
+
+    }
+
+    public void aggiungiCanzone(){
+        canzone song;
+
+
+    }
+}
+serve altro?
+oh
+serve altro?
+song = new canzone();
+in aggiungi canzone
+non mi è arrivato
+Scanner a = new Scanner(System.in);
