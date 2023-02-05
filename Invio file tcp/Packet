@@ -1,0 +1,29 @@
+class Packet:
+    INIZIO = 0
+
+    def __init__(self, blocco, stato):
+        self.stato = stato
+        self.blocco = blocco
+
+    def to_bytes(self):
+        return b"".join([
+            self.stato.to_bytes(1, 'big'),
+            len(self.blocco).to_bytes(2, 'big'),
+            self.blocco,
+        ])
+
+    @staticmethod
+    def from_bytes(buffer):
+        stato = int.from_bytes(buffer[:1], 'big')
+        lung = int.from_bytes(buffer[1:3], 'big')
+        blocco = buffer[3:3 + lung]
+        return Packet(stato, blocco)
+        
+if __name__ == "__main__":
+    pkt = Packet(b'ciao', Packet.INIZIO)
+    buffer = pkt.to_bytes()
+    pkt2 = Packet.from_bytes(buffer)
+    print(pkt.to_bytes())
+
+    assert (pkt.stato == pkt2.stato)
+    assert (pkt.blocco == pkt2.blocco)
